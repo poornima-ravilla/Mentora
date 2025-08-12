@@ -10,6 +10,7 @@ import {
 import { cn, getSubjectColor } from "@/lib/utils";
 import Link from "next/link";
 import Image from "next/image";
+import { title } from "process";
 
 
 interface CompanionsListProps{
@@ -18,10 +19,10 @@ interface CompanionsListProps{
   clasNames? : string;
 }
 
-const CompanionsList = ({tile,companions,classNames}:CompanionsListProps) => {
+const CompanionsList = ({title,companions,classNames}:CompanionsListProps) => {
   return (
     <article className={cn('companion-list',classNames)}>
-      <h2 className="fotn-bold text-3xl">Recent Sessions</h2>
+      <h2 className="fotn-bold text-3xl">{title}</h2>
       <Table>
   <TableHeader>
     <TableRow>
